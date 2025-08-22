@@ -1,0 +1,33 @@
+# info.yml for tk-framework-ffmpeg
+display_name: "FFmpeg Framework"
+description: "Framework providing FFmpeg functionality for ShotGrid Toolkit applications and engines"
+
+# Framework-specific configuration
+configuration:
+    ffmpeg_path:
+        type: str
+        description: "Custom path to FFmpeg executable. Leave empty to use bundled version."
+        default_value: ""
+        allows_empty: True
+    
+    default_video_codec:
+        type: str
+        description: "Default video codec for conversions"
+        default_value: "libx264"
+    
+    default_audio_codec:
+        type: str
+        description: "Default audio codec for conversions"
+        default_value: "aac"
+    
+    max_threads:
+        type: int
+        description: "Maximum number of threads FFmpeg can use (0 for auto)"
+        default_value: 0
+
+
+# Supported platforms
+supported_platforms: [windows]
+
+# Framework version
+version: "v1.0.0"
